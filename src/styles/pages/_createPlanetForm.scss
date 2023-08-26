@@ -1,0 +1,75 @@
+@use "../settings" as *;
+
+#createPlanetForm {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+
+	> input, > textarea {
+		min-width: $defaultMaxWidth;
+		margin: $smallMargin auto;
+	}
+
+	ul {
+		$scrollBackgroundColor: #030712;
+
+		margin: $largeMargin 0;
+		width: $defaultMaxWidth;
+		display: flex;
+		overflow: auto;
+		padding-bottom: $defaultPadding;
+		background:
+			linear-gradient(90deg, $scrollBackgroundColor 30%, rgba(255,255,255,0)),
+			linear-gradient(90deg, rgba(255,255,255,0), $scrollBackgroundColor 70%) 0 100%,
+			radial-gradient(farthest-side at 0% 50%, black, $scrollBackgroundColor),
+			radial-gradient(farthest-side at 100% 50%, black, $scrollBackgroundColor) 0 100%;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		background-position: top left, top right, top left, top right;
+		background-size: 40px 100%, 40px 100%, 20px 100%, 20px 100%;
+		background-attachment: local, local, scroll, scroll;
+
+		img { width: 100px; }
+
+		li {
+			border: 1px dashed rgba($lightGrey, 0.5);
+			border-radius: 50%;
+			padding: 5px;
+			margin: 10px;
+			@include transition;
+
+			&:hover, &:focus {
+				border-color: $lightGrey;
+				transform: scale(1.1);
+				cursor: pointer;
+			}
+
+			&.selected {
+				border-color: $blue;
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	#characteristics {
+		display: flex;
+
+		input {
+			margin: $smallMargin;
+			flex: 1;
+
+			&:first-child { margin-left: 0; }
+			&:last-child { margin-right: 0; }
+		}
+	}
+
+	#actions {
+		margin-top: $largeMargin;
+		text-align: center;
+
+		button {
+			width: 200px;
+			margin: 0 $smallMargin;
+		}
+	}
+}

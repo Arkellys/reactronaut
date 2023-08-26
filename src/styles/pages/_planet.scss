@@ -1,0 +1,27 @@
+@use "../settings" as *;
+
+#planet {
+	> ul {
+		display: flex;
+		margin: $smallMargin 0 $largeMargin;
+
+		li {
+			padding: 0 $defaultPadding;
+			font-size: 1.2em;
+			text-align: center;
+
+			&:not(:last-child) { border-right: 2px solid $lightGrey; }
+
+			h6 {
+				color: $blue;
+				font-size: 1.4em;
+				margin-bottom: 5px;
+				font-weight: 400;
+			}
+		}
+	}
+
+	button {
+		margin-top: $smallMargin;
+	}
+}

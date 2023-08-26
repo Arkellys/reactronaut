@@ -1,0 +1,38 @@
+@use "../settings" as *;
+
+#mainNavigation {
+	position: fixed;
+	left: $bodyPadding;
+	top: $bodyPadding + 20px;
+
+	li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&:first-child {
+			font-size: 1.2em;
+		}
+
+		&:not(:last-child)::after {
+			content: "";
+			border-left: 2px dotted $lightGrey;
+			height: 20px;
+			margin: 10px 0;
+		}
+
+		a {
+			@include transition;
+			font-family: $titleFontFamily;
+
+			&:hover, &.active {
+				transform: scale(1.2);
+			}
+
+			&.active {
+				color: $blue;
+				font-weight: bold;
+			}
+		}
+	}
+}

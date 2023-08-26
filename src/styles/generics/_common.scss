@@ -1,0 +1,84 @@
+@use "sass:color";
+@use "../settings" as *;
+
+* {
+	scrollbar-color: $scrollbarThumbColor $scrollbarTrackColor;
+	scrollbar-width: thin;
+}
+
+html {
+	background-image: linear-gradient(to top,#0c2749, #0c213c, #0c1a2f, #0b1422, #09111d, #060d18, #030812, #030812, #030712, #030711, #030611);
+	background-attachment: fixed;
+	font-family: $bodyFontFamily;
+	font-size: $defaultFontSize;
+	line-height: 1.5;
+	color: $defaultTextColor;
+	min-height: 100vh;
+	padding: $bodyPadding;
+	display: flex;
+}
+
+body {
+	display: flex;
+	flex: 1;
+}
+
+a, a:hover, a:focus, a:active { text-decoration: none; }
+a { color: inherit; }
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+	font-family: $titleFontFamily;
+}
+
+input, button, textarea {
+	font: inherit;
+	line-height: inherit;
+	color: inherit;
+	background-color: $darkBlue;
+	border: 1px solid rgba($lightGrey, 0.3);
+	border-radius: calc($defaultBorderRadius / 3);
+	padding: $defaultPadding;
+	max-width: $defaultMaxWidth;
+	@include transition;
+	
+
+	&:hover, &:focus {
+		border-color: $blue;
+	}
+}
+
+textarea {
+	min-height: 200px;
+	resize: none;
+}
+
+p {
+	line-height: 1.4;
+	font-size: 1.1em;
+}
+
+::placeholder {
+	color: color.adjust($color: $lightGrey, $lightness: 10%);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+
+	&-track {
+		background-color: $scrollbarTrackColor;
+		background-clip: content-box;
+		border-radius: 3px;
+	}
+
+	&-thumb {
+		border-radius: $defaultBorderRadius;
+		background-color: $scrollbarThumbColor;
+		background-clip: content-box;
+	}
+
+	&-corner {
+		background-color: transparent;
+	}
+}

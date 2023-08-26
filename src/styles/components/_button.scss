@@ -1,0 +1,45 @@
+@use "sass:color";
+@use "../settings" as *;
+
+button {
+	border-radius: $defaultBorderRadius;
+	font-size: 1.1em;
+	padding: $defaultPadding $defaultPadding * 2;
+	border: 1px solid transparent;
+	@include transition;
+
+	&:hover { cursor: pointer; }
+
+	&:disabled {
+		opacity: 0.6;
+		pointer-events: none;
+	}
+
+	&.primary {
+		background-color: $blue;
+				
+		&:hover, &:focus {
+			background-color: color.adjust($color: $blue, $lightness: 10%);
+		}
+
+		&.lined {
+			border-color: $lightGrey;
+			background-color: transparent;
+
+			&:hover, &:focus {
+				border-color: $blue;
+				color: $blue;
+			}
+		}
+	}
+
+	&.danger {
+		background-color: $red;
+
+		&:hover, &:focus {
+			background-color: color.adjust($color: $red, $lightness: 10%);
+			animation: shake 100ms ease-in-out infinite;
+			border-color: transparent;
+		}
+	}
+}

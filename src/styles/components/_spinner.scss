@@ -1,0 +1,75 @@
+@use "sass:math";
+@use "../settings" as *;
+
+$spinnerSize: 50px;
+$spinnerSpeed: 2s;
+
+$circleWidth: 3px;
+$circleColor: rgba(0, 0, 0, 0.5);
+
+$bubbleSize: math.div($spinnerSize, 4);
+$bubbleColor: $blue;
+
+$dropSpeed: 0.8s;
+$dropShiftDown: math.div($spinnerSize, 1.8);
+$dropShiftSide: math.div($bubbleSize, 2);
+
+// Using filter to change the drops color so
+// the animation doesn't freeze when the UI thread is busy
+// See: https://www.phpied.com/css-animations-off-the-ui-thread/
+$dropColor: hue-rotate(-100deg);
+
+
+.spinner {
+	width: $spinnerSize;
+	height: $spinnerSize;
+	animation: spin $spinnerSpeed linear infinite;
+	border: $circleWidth solid $circleColor;
+	border-radius: 50%;
+	margin: auto;
+	
+	span {
+		width: $bubbleSize;
+		height: $bubbleSize;
+		display: block;
+		border-radius: 50%;
+		background-color: $bubbleColor;
+		position: relative;
+		transform: rotate(-63deg);
+		
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background-color: $bubbleColor;
+		}
+		
+		&:before { animation: firstDrop $dropSpeed linear infinite; }
+		&:after { animation: secondDrop $dropSpeed linear infinite math.div($dropSpeed, 2); }
+	}
+}
+
+// Keyframes
+
+@keyframes spin {
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes firstDrop {
+		20% { filter: none; }
+    100% {
+        transform: translate(-$dropShiftDown, $dropShiftSide) scale(0);
+				filter: $dropColor;
+    }
+}
+
+@keyframes secondDrop {
+    0% { transform: translate(0, 0) scale(.9); }
+		20% { filter: none; }
+    100% {
+        transform: translate(-$dropShiftDown, -$dropShiftSide) scale(0);
+				filter: $dropColor;
+    }
+}
