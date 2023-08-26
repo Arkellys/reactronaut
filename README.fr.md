@@ -3,7 +3,7 @@
 <picture>
 <img alt="Logo" src="src/assets/react.svg?raw=true" width="100px">
 </picture>
-
+<br />
 <br />
   
 Mesdames et messieurs, Reactronautes et chers passionnés de codage, bienvenue à bord de l'<b>USS React</b> ! Alors que nous nous préparons pour notre voyage à travers le Système Solaire, veuillez attacher vos ceintures et ranger vos ordinateurs en toute sécurité devant vous. Ce vol est sous votre commandement habile, car <b>vous avez été choisi pour être le pilote de cette mission</b>. Au nom de l'équipage, nous vous souhaitons un codage tout en douceur !
@@ -66,8 +66,8 @@ planets: [
     image: string,
     description: string,
     characteristics: {
-      diameter: string
-      population: string
+      diameter: string,
+      population: string,
       type: string
     }
   }
@@ -102,6 +102,13 @@ La documentation pour chaque composant est disponible dans la [JSDoc](https://js
 ## Instructions
 
 🚀 *C'est parti pour le décollage...*
+
+1. [Le système solaire](#1-le-système-solaire-)
+2. [Une planète](#2-une-planète-)
+3. [La navigation](#3-la-navigation-)
+4. [Le soleil](#4-le-soleil-%EF%B8%8F)
+5. [Détruire une planète](#5-détruire-une-planète-)
+6. [Créer une planète](#6-créer-une-planète-)
 
 ### 1. Le système solaire 🌌
 
@@ -231,7 +238,10 @@ Maintenant, développe la fonctionnalité permettant de changer l'image du solei
 
 ---
 
-**Toutes mes félicitations, la mission est un succès ! Nous avons maintenant un système solaire complet disposant de son soleil et de ses planètes.** Mais si on allait encore plus loin...
+<div align="center">
+<strong>Toutes mes félicitations, la mission est un succès ! Nous avons maintenant un système solaire complet disposant de son soleil et de ses planètes.</strong><br />
+Mais si on allait encore plus loin...
+</div>
 
 ---
 
@@ -282,8 +292,8 @@ Parfait, maintenant que le formulaire est accessible, il faut le rendre fonction
   image: string,
   description: string,
   characteristics: {
-    diameter: string
-    population: string
+    diameter: string,
+    population: string,
     type: string
   }
 }
@@ -328,6 +338,5 @@ C'est bien beau d'avoir un formulaire, mais il faudrait pouvoir interagir avec !
 ---
 
 <div align="center">
-
-<h4>Mission accomplie, Reactronaut ! Tu as complété avec succès cette aventure reactiale. Maintenant, détends-toi et profite de la vue imprenable sur l'univers que tu as créé. 🌟<h4>
+<h4>Mission accomplie, Reactronaut ! Tu as complété avec succès cette aventure reactiale. <br />Maintenant, détends-toi et profite de la vue imprenable sur l'univers que tu as créé. 🌟<h4>
 </div>
