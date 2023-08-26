@@ -1,10 +1,13 @@
-# Reactronaut
 ![en](https://img.shields.io/badge/lang-en-blue.svg)
 ![fr](https://img.shields.io/badge/lang-fr-darkblue.svg)
 
-A beginner-level exercise to build a space-themed React app showcasing the Solar System.
-
-![Screenshot](public/app_screenshot.png?raw=true)
+<div align="center">
+<h1>Reactronaut</h1>
+A beginner-level exercise to build a React app showcasing the Solar System.
+<br /><br />
+  
+<img alt="Screenshot" src="public/app_screenshot.png?raw=true" />
+</div>
 
 ## Objective
 

@@ -3,7 +3,7 @@
 <picture>
 <img alt="Logo" src="src/assets/react.svg?raw=true" width="100px">
 </picture>
-
+<br />
 <br />
   
 Ladies and gentlemen, Reactronauts, and esteemed coding enthusiasts, welcome aboard the <b>USS React</b>! As we prepare for our journey through our Solar System, please ensure your seat belts are fastened and your laptops securely stowed in front of you. This flight is under your skillful command, because <b>you’ve been chosen to be the pilot on this mission</b>. On behalf of the crew, we wish you smooth coding!
@@ -65,8 +65,8 @@ planets: [
     image: string,
     description: string,
     characteristics: {
-      diameter: string
-      population: string
+      diameter: string,
+      population: string,
       type: string
     }
   }
@@ -101,6 +101,13 @@ The documentation for each component is available in the [JSDoc](https://jsdoc.a
 ## Instructions
 
 🚀 *Time for take-off...*
+
+1. [The solar system](#1-the-solar-system-)
+2. [A planet](#2-a-planet-)
+3. [Navigation](#3-navigation-)
+4. [The sun](#4-the-sun-%EF%B8%8F)
+5. [Destroy a planet](5-destroy-a-planet-)
+6. [Create a planet](#6-create-a-planet-)
 
 ### 1. The solar system 🌌
 
@@ -230,7 +237,10 @@ Now, develop the functionality to change the sun's image when clicking on this b
 
 ---
 
-**Congratulations, the mission is a success! We now have a complete solar system with its sun and planets.** But what if we took it even further...
+<div align="center">
+<strong>Congratulations, the mission is a success! We now have a complete solar system with its sun and planets.</strong><br />
+But what if we took it even further...
+</div>
 
 ---
 
@@ -281,8 +291,8 @@ Perfect, now that the form is accessible, let's make it functional. The expected
   image: string,
   description: string,
   characteristics: {
-    diameter: string
-    population: string
+    diameter: string,
+    population: string,
     type: string
   }
 }
@@ -327,6 +337,5 @@ It's all well and good to have a form, but you should be able to interact with i
 ---
 
 <div align="center">
-
-<h4>Mission accomplished, Reactronaut! You have successfully completed this reactial adventure. Now, relax and enjoy the breathtaking view of the universe you've created. 🌟<h4>
+<h4>Mission accomplished, Reactronaut! You have successfully completed this reactial adventure. <br />Now, relax and enjoy the breathtaking view of the universe you've created. 🌟<h4>
 </div>
