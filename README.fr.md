@@ -338,5 +338,5 @@ C'est bien beau d'avoir un formulaire, mais il faudrait pouvoir interagir avec !
 ---
 
 <div align="center">
-<h4>Mission accomplie, Reactronaut ! Tu as complété avec succès cette aventure reactiale. <br />Maintenant, détends-toi et profite de la vue imprenable sur l'univers que tu as créé. 🌟<h4>
+<b>Mission accomplie, Reactronaut ! Tu as complété avec succès cette aventure reactiale. <br />Maintenant, détends-toi et profite de la vue imprenable sur l'univers que tu as créé. 🌟</b>
 </div>

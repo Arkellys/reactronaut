@@ -337,5 +337,5 @@ It's all well and good to have a form, but you should be able to interact with i
 ---
 
 <div align="center">
-<h4>Mission accomplished, Reactronaut! You have successfully completed this reactial adventure. <br />Now, relax and enjoy the breathtaking view of the universe you've created. 🌟<h4>
+<b>Mission accomplished, Reactronaut! You have successfully completed this reactial adventure. <br />Now, relax and enjoy the breathtaking view of the universe you've created. 🌟</b>
 </div>
